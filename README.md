@@ -8,7 +8,12 @@
   <li>Agregar en INSTALLED_APPS : 'rest_framework',</li>
   <li>Crear una nueva app</li>
   <li>Agregar APP en INSTALLED_APPS : 'books', </li>
-  <li>Modificar el modelo</li>
-  <li></li>
+  <li>Crear urls.py</li>
+  <li>Modificar el modelo: campos</li>
+  <li>Crear migraciones: python manage.py makemigrations</li>
+  <li>Ejecutar migraciones: python manage.py migrate </li>
+  <li>Se genera cambios en la base de datos </li>
+  <li>Crear un serializador </li>
+  
   
 </ol>
