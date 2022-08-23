@@ -10,9 +10,5 @@
   <li>Agregar APP en INSTALLED_APPS : 'books', </li>
   <li>Modificar el modelo</li>
   <li></li>
-   <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
   
 </ol>
