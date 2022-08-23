@@ -1,3 +1,5 @@
+from django.shortcuts import get_object_or_404
+
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -71,4 +73,19 @@ class CreateBook(APIView):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED) 
 
-    
+
+class RetrieveAuthorsAPIView(APIView):
+    permission_classes =(AllowAny,)
+
+    def get(self, request, author_id):
+        author_obj =Author.objects.get(id=author_id)
+        serializer = AuthorSerializer(author_obj)
+        return Response(serializer.data)
+
+class RetrieveBooksAPIView(APIView):
+    permission_classes =(AllowAny,)
+
+    def get(self, request, book_id):
+        book_obj = get_object_or_404(Book, pk=book_id)
+        serializer = BookSerializer(book_obj)
+        return Response(serializer.data)

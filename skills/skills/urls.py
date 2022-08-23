@@ -20,7 +20,9 @@ from books.views import (
     RetrieveBooks,
      RetrieveAuthors,
      CreateAuthor,
-     CreateBook
+     CreateBook,
+     RetrieveAuthorsAPIView,
+     RetrieveBooksAPIView
      )
 
 urlpatterns = [
@@ -30,4 +32,6 @@ urlpatterns = [
     path('books/create/', CreateBook.as_view()),
     path('authors/', RetrieveAuthors.as_view()),
     path('authors/create/', CreateAuthor.as_view()),
+    path('authors/<int:author_id>/', RetrieveAuthorsAPIView.as_view() ),
+    path('books/<int:book_id>/', RetrieveBooksAPIView.as_view() ),
 ]
